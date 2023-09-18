@@ -9,26 +9,17 @@
  */
 void print_array(int *a, int n)
 {
-	int len = 0;
+	int i = 0;
 
-	int i;
+	while (i < n)
+	{
+		printf("%d", *(a + i0));
 
-	while (*(a + len) != '\0')
-	{
-		len++;
-	}
-	for (i = 0; i < n; i++)
-	{
 		if (i != n - 1)
 		{
-			printf("%d, ", *(a + i));
-			fflush(stdout);
+			printf(", ");
 		}
-		else
-		{
-			printf("%d", *(a + i));
-			fflush(stdout);
-		}
+		i++
 	}
-	_putchar('\n');
+	putchar('\n');
 }
