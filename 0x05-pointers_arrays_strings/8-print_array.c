@@ -1,26 +1,25 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
- * print_array - check the code
- *
- * @a: param
- * @n: param1
+ * print_array - check the code.
+ * @a: parameter.
+ * @n: parameter.
  * Return: Always 0.
  */
 void print_array(int *a, int n)
 {
-	int i = 0;
+	int count = 0;
 
-	while (i < n)
+	while (count < n)
 	{
-		printf("%d", *(a + i0));
+		printf("%d", a[count]);
 
-		if (i != n - 1)
+		if (count != n - 1)
 		{
 			printf(", ");
 		}
-		i++;
+
+		count++;
 	}
 	putchar('\n');
 }
