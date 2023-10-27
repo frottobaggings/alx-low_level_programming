@@ -1,12 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "3-calc.h"
-
 /**
- * get_op_func - function pointer that selects the correct function to perform
- * the operation asked by the user
- * @s: the operator given by the user
- *
- * Return: pointer to the function that corresponds to the
- * operator given as a parameter
+ * get_op_func - gets the right func
+ * @s: function s
+ * Return: int value
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -21,13 +19,13 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 	i = 0;
-
-	while (ops[i].op)
+	while (ops[i].f != NULL)
 	{
-		if (strcmp(ops[i].op, s) == 0)
+		if (*s == *(ops[i].op) && s[1] == '\0')
 			return (ops[i].f);
 		i++;
 	}
 
-	return (NULL);
+	printf("Error\n");
+	exit(99);
 }
